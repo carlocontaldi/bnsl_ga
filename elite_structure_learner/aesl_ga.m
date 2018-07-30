@@ -1,5 +1,5 @@
-function [dag,sc_star,conv,last_gen] = aesl_ga(ss,data,N,M,MPmax,alpha,d,scoring_fn,bnet)
 % Adaptive Elite-based Structure Learner using GA
+function [dag,sc_star,conv,last_gen] = aesl_ga(ss,data,N,M,MPmax,alpha,d,scoring_fn,bnet)
 %% Init
 n = size(bnet.dag,1);   % #nodes
 ns = bnet.node_sizes;   % node sizes
