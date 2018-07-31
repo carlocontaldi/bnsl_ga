@@ -29,8 +29,8 @@ fprintf('Running... %s_%s%s - N=%s M=%s P=%s [%s]\n',...
 fprintf('Iter   F1 Score  Sensitivity  Specificity    Bayes Score     Exe Time  #Generations\n');
 n = size(bnet.dag,1);       % #nodes
 cache = score_init_cache(n,256*n);
-eoer = cell(T,1);           % end-of-execution results
-conv(1:T) = struct('f1',zeros(1,M),'se',zeros(1,M),'sp',zeros(1,M),'sc',zeros(1,M));   % convergence behavior
+eoer = cell(T,1);
+conv(1:T) = struct('f1',zeros(1,M),'se',zeros(1,M),'sp',zeros(1,M),'sc',zeros(1,M));
 str = sprintf('%s%s',dataset,num2str(D));
 data = acquire_data(str,D,T,gen_new_data,bnet);
 bnet.dag = logical(bnet.dag);   % double2boolean DAG conversion
