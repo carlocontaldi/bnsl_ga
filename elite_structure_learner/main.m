@@ -1,6 +1,6 @@
-% *Bayesian network hybrid learning using an elite-guided genetic algorithm*
+%% Bayesian network hybrid learning using an elite-guided genetic algorithm
 % Ref: https://doi.org/10.1007/s10462-018-9615-5
-% *Init*
+%% Init
 % Uncomment algo & bnet of your choice, then set parameters as needed.
 % Input
 %   data - T instances of n-by-D dataset, a numeric matrix of D n-sized samples
@@ -35,7 +35,7 @@ str = sprintf('%s%s',dataset,num2str(D));
 data = acquire_data(str,D,T,gen_new_data,bnet);
 bnet.dag = logical(bnet.dag);   % double2boolean DAG conversion
 format shortG
-% *Execution*
+%% Execution
 for t = 1:T
     eoer{t} = -1*ones(1,6);
     start = cputime;                % tic
